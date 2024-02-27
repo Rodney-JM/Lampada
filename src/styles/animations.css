@@ -1,0 +1,22 @@
+.cair{
+    animation: lampadaCair 6s 1s both;
+}
+
+@keyframes lampadaCair {
+   0%{
+    transform: rotate(0deg);
+   } 
+   20%{
+    transform: rotate(180deg);
+   }
+   40%{
+    transform: rotate(180deg);
+   }
+   70%{
+    transform: rotate(180deg);
+    transform: translateY(800px);
+   }
+   100%{
+    transform: translateY(800px);
+   }
+}
