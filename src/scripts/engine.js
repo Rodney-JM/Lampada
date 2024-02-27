@@ -9,10 +9,12 @@ const resetButton = document.querySelector("#on-buttonReset");
 let numberTime= 0;
 
 onButton.addEventListener("click", ()=>{
-    lampada.classList.toggle('dark');
-    baseLampada.classList.toggle('dark');
-    basePequena.classList.toggle('grey');
-    body.classList.toggle('black');
+    if(numberTime<5){
+        lampada.classList.toggle('dark');
+        baseLampada.classList.toggle('dark');
+        basePequena.classList.toggle('grey');
+        body.classList.toggle('black');
+    }
     numberTime++;
 
     if(lampada.classList.contains('dark')) {
@@ -26,8 +28,9 @@ onButton.addEventListener("click", ()=>{
         lampada.classList.remove("luz");
         baseLampada.classList.remove("luz");
         body.classList.add("black");
-    }else if(lampadaBody.classList.contains('cair')){
-        lampadaBody.remove();
+        setInterval(() => {
+            lampadaBody.remove();
+        }, 4500);
     }
 });
 
